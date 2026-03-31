@@ -76,7 +76,7 @@ docker-compose ps
 python data/generate_data.py
 ```
 
-This creates `data/employees_raw.csv` with 1155 rows including
+This creates `data/employees_raw.csv` with ~1100 rows including
 intentional data quality issues.
 
 ### 5. Run the pipeline
@@ -89,7 +89,7 @@ docker exec spark_master /opt/spark/bin/spark-submit \
 
 Expected output:
 ```
-Pipeline complete. 930 clean records in PostgreSQL.
+Pipeline complete. ~900 clean records in PostgreSQL.
 ```
 
 ### 6. Verify results
