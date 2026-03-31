@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+*.log
+data/employees_raw.csv
+spark/pipeline.log
+spark/jars/*.jar
+.DS_Store
+Thumbs.db

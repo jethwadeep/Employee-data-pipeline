@@ -1,0 +1,70 @@
+services:
+
+  postgres:
+    image: postgres:13
+    container_name: employee_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/01_init.sql
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/02_schema.sql
+    networks:
+      - pipeline_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  spark-master:
+    image: apache/spark:3.5.1
+    container_name: spark_master
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    environment:
+      - SPARK_MASTER_HOST=spark-master
+      - SPARK_MASTER_PORT=7077
+      - SPARK_MASTER_WEBUI_PORT=8080
+    ports:
+      - "7077:7077"
+      - "8080:8080"
+    volumes:
+      - ./spark:/opt/spark-apps
+      - ./data:/opt/spark-data
+      - ./spark/jars:/opt/spark/jars/extra
+    networks:
+      - pipeline_net
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  spark-worker:
+    image: apache/spark:3.5.1
+    container_name: spark_worker
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    environment:
+      - SPARK_WORKER_MEMORY=2g
+      - SPARK_WORKER_CORES=2
+      - SPARK_WORKER_WEBUI_PORT=8081
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./spark:/opt/spark-apps
+      - ./data:/opt/spark-data
+      - ./spark/jars:/opt/spark/jars/extra
+    networks:
+      - pipeline_net
+    depends_on:
+      - spark-master
+
+networks:
+  pipeline_net:
+    driver: bridge
+
+volumes:
+  postgres_data:

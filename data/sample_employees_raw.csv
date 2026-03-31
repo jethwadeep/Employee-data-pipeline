@@ -1,0 +1,20 @@
+employee_id,first_name,last_name,email,hire_date,job_title,department,salary,manager_id,address,city,state,zip_code,birth_date,status
+1302,Eric,baker,eric.baker@corp.org,2021-02-23,DevOps Engineer,Legal,43994,1259,4196 Jessica Stream,Lauraburgh,IL,64500,1978-04-01,inactive
+2081,Nicholas,Johnson,NICHOLAS.johnson@COMPANY.COM,2012-10-07,Manager,marketing,142701,1276,424 Rebecca Village Apt. 972,East Ashley,AZ,14028,2001-12-14,Active
+1795,KATHY,Anderson,kathy.anderson@corp.org,2017-12-26,Financial Analyst,Engineering,37457,,8453 Thomas Plains Suite 090,Brianaland,AZ,80959,1975-11-21,Inactive
+1242,Jeffrey,WHITE,JEFFREY.white@business.net,2012-05-27,Manager,analytics,35694.0,1143,8861 Walker Forest,Markport,IL,29133,1995-08-15,inactive
+1692,Thomas,rodriguez,thomas.rodriguez@business.net,2016-07-12,DevOps Engineer,finance,"""$66,629""",1268,118 Jared Overpass,North Donald,MA,81305,1983-11-13,Inactive
+1991,wanda,Young,wanda.young@business.net,2014-09-24,Marketing Lead,IT,74552,1234,7812 Figueroa Parks,East Charles,TX,21666,1978-04-07,ACTIVE
+1776,JAMES,Larsen,james.larsen@company.com,2015-01-07,Product Manager,HR,129419,1103,,Lake Julie,TX,69389,1962-05-20,Active
+1932,Lisa,Sullivan,LISA.sullivan@company.com,2013-01-23,Software Engineer,finance,"""$55,864""",1856,831 Jackson Run,Lake Lisafort,GA,29129,1979-03-25,inactive
+1949,Christopher,Moore,christopher.moore@business.net,2012-06-27,Senior Developer,Legal,110727.0,1565,63248 Mercado Estate Apt. 762,Ramirezview,IL,79967,1971-09-16,Active
+1378,MICHAEL,harvey,michael.harvey@company.com,2017-06-18,Operations Manager,LEGAL,81629,1068,818 Devon Isle,New Daniel,TX,63218,1986-03-07,Terminated
+1438,Kayla,Smith,kayla.smith@enterprise.io,2023-11-04,DevOps Engineer,IT,71501,1409,60164 Matthews Motorway,Hansonview,TX,45240,1992-09-28,terminated
+1695,Steven,Webb,steven.webb@COMPANY.COM,2020-09-06,HR Specialist,HR,108262,1037,1620 April Crossing,East Samuel,CO,15399,1966-10-14,Active
+1490,Joseph,Jones,JOSEPH.jones@COMPANY.COM,2012-08-24,DevOps Engineer,Finance,142355,1355,3111 Johnson Flats,Jamesmouth,AZ,33272,1981-04-15,inactive
+1288,stanley,chavez,stanley.chavez@company.com,2023-02-28,Sales Executive,operations,"""$48,368""",1200,50208 Jacob Cove Suite 427,East Christophertown,TX,65195,2003-08-16,ACTIVE
+1784,Carolyn,GARZA,carolyn.garza@enterprise.io,2024-09-29,Financial Analyst,ENGINEERING,"""$47,395""",1650,35996 Higgins Canyon,Deborahmouth,TX,60891,1967-12-14,terminated
+1108,marcia,hanson,marcia.hanson@business.net,2021-08-21,Data Analyst,Marketing,53172,1054,65585 James Pass,Porterton,IL,05601,1969-04-30,terminated
+1284,Courtney,Anderson,courtney.anderson@company.com,2025-07-05,Senior Developer,HR,"""$142,022""",1269,55778 Dunn Dale,New Carla,CA,83213,1972-11-08,Active
+1628,Martin,GIBSON,martin.gibson@enterprise.io,2011-06-18,Sales Executive,Engineering,"""$139,510""",1134,0241 Erin Walk Apt. 957,South Morganfort,WA,14838,1993-07-17,Inactive
+1277,AMY,Young,amy.young@business.net,2019-04-06,Operations Manager,engineering,62901,1236,2763 Haynes Landing Suite 647,New David,NY,75984,2002-12-19,Active
