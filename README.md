@@ -49,6 +49,12 @@ cd employee-pipeline
 ```
 
 ### 2. Download the JDBC driver
+
+Note:
+The PostgreSQL JDBC driver is not included in the repository to follow best practices 
+(avoiding committing binary dependencies). Please download it using the command below.
+
+
 ```bash
 curl -L -o spark/jars/postgresql-42.7.3.jar \
   https://jdbc.postgresql.org/download/postgresql-42.7.3.jar
