@@ -16,22 +16,21 @@ Services:
 ## Project Structure
 ```
 employee-pipeline/
-├── docker-compose.yml       # service orchestration
-├── .env                     # credentials and ports
-├── README.md
+├── docker-compose.yml           # service orchestration
+├── .env                         # credentials and ports
+├── README.md                    # project documentation
 ├── data/
-│   ├── generate_data.py     # generates employees_raw.csv
-│   └── employees_raw.csv    # raw input data (1155 rows)
+│   ├── generate_data.py         # generates employees_raw.csv
+│   ├── sample_employees_raw.csv # sample input data
+│   └── sample_output.csv        # sample output data for reference
 ├── spark/
-│   ├── pipeline.py          # main Spark cleaning job
-│   ├── test_connection.py   # JDBC connectivity smoke test
-│   ├── pipeline.log         # pipeline run logs
-│   └── jars/
-│       └── postgresql-42.7.3.jar  # JDBC driver
+│   ├── pipeline.py              # main Spark cleaning job
+│   ├── test_connection.py       # JDBC connectivity smoke test
+│   └── jars/                    # JDBC driver (excluded via .gitignore)
 └── sql/
-    ├── init.sql             # runs on first Postgres start
-    ├── schema.sql           # creates employees_clean table
-    └── verify.sql           # post-pipeline data quality checks
+    ├── init.sql                 # runs on first Postgres start
+    ├── schema.sql               # creates employees_clean table
+    └── verify.sql               # post-pipeline data quality checks
 ```
 
 ## Prerequisites
